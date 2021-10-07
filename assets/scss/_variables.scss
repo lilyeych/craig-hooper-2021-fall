@@ -1,0 +1,131 @@
+// include $variables and @mixins in this file
+$corp1: #4B1ADD;
+$corp1Light: #96D0FF;
+$lightPeach: #FFCCC9;
+$yellow: #FFFEF2;
+$grey: #858585;
+$lightGrey: #FAFAFA;
+$darkGrey: #2F2F2F;
+$white: #F8F8F8;
+$black: #1B1B1B;
+$archive: #FBFBFB;
+$zbg: 0;
+$zcontent: 10;
+$zheader: 20;
+
+@font-face {
+  font-family: 'Cooper';
+  src: url('../fonts/Cooper-Light.woff2') format('woff2'),
+       url('../fonts/Cooper-Light.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/Cooper-Light.ttf')  format('truetype');
+	font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Cooper';
+  src: url('../fonts/Cooper-Medium.woff2') format('woff2'),
+       url('../fonts/Cooper-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/Cooper-Medium.ttf')  format('truetype');
+	font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Degular';
+  src: url('../fonts/Degular-Display-Bold.woff2') format('woff2'),
+       url('../fonts/Degular-Display-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/Degular-Display-Bold.ttf')  format('truetype');
+}
+
+%font-header {
+  font-family: "Degular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+%font-body {
+  font-family: "Cooper", "Times New Roman", Times, serif;
+}
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1100px) { @content; }
+  }
+  @else if $point == max-papa-bear {
+    @media (max-width: 1099px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (min-width: 960px) { @content; }
+  }
+  @else if $point == max-mama-bear {
+    @media (max-width: 959px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (min-width: 768px)  { @content; }
+  }
+  @else if $point == max-baby-bear {
+    @media (max-width: 767px)  { @content; }
+  }
+  @else if $point == tiny-bear {
+    @media (min-width: 600px)  { @content; }
+  }
+  @else if $point == max-tiny-bear {
+    @media (max-width: 599px)  { @content; }
+  }
+}
+
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin bg-cover {
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+%vspacing {
+  margin-bottom: 80px;
+
+  @include breakpoint (mama-bear) {
+    margin-bottom: 192px;
+  }
+}
+
+.vspacing {
+  @extend %vspacing;
+}
+
+%browserspacing {
+  margin-bottom: 30px;
+
+  @include breakpoint (mama-bear) {
+    margin-bottom: 64px;
+  }
+}
+
+%clear {
+  &:after {
+  content: " ";
+  display: table;
+  clear: both;
+  }
+}
+
+%ease-in {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+%no-bullet {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+%shadow {
+	box-shadow: 0 -12px 36px 0 rgba(0,0,0,0.08);
+}

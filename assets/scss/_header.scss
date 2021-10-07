@@ -1,0 +1,31 @@
+header {
+	margin-top: 32px;
+	margin-bottom: 12px;
+	text-align: left;
+	@include breakpoint (baby-bear) {
+		margin-top: 128px;
+		margin-bottom: 16px;
+	}
+
+	.avatar {
+		display: block;
+		width: 70px;
+    height: auto;
+    margin-bottom: 16px;
+    transition: all 0.1s;
+
+    &:hover {
+      @include breakpoint (baby-bear) {
+        animation: spin 0.25s linear infinite;
+      }
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
+  
+  .tag {
+    color: $grey;
+  }
+}

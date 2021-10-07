@@ -1,0 +1,110 @@
+html {
+	@extend %font-body;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 62.5% ;
+	line-height: 1.6;
+  color: $yellow;
+}
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0;
+	font-weight: 400;
+}
+
+a {
+	@extend %ease-in;
+	text-decoration: underline;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent; /* For some androids */
+	font-weight: 500;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:link,
+	&:visited {
+		color: $corp1;
+	}
+
+	&:hover,
+	&:active {
+		color: $yellow;
+	}
+}
+
+h1 {
+	@extend %font-body;
+	font-size: 6.4rem;
+	line-height: 6.4rem;
+  // margin-bottom: 2.42rem;
+
+	@include breakpoint (baby-bear) {
+	}
+}
+
+h2 {
+	@extend %font-body;
+		font-size: 4.8rem;
+    line-height: 5.4rem;
+    // margin-bottom: 2.4rem;
+
+		@include breakpoint (baby-bear) {
+		}
+}
+
+h3 {
+	@extend %font-body;
+	font-size: 3.6rem;
+  line-height: 4.2rem;
+  
+  @include breakpoint (baby-bear) {
+  }
+}
+
+h4 {
+	font-size: 3.2rem;
+	line-height: 4.2rem;
+	// margin-bottom: 2.4rem;
+
+	@include breakpoint (baby-bear) {
+	}
+}
+
+h5 {
+	font-size: 2.4rem;
+  line-height: 3.4rem;
+  
+  @include breakpoint (baby-bear) {
+  }
+}
+
+h6 {
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+}
+
+small {
+	@extend h6;
+}
+
+p {
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+	// margin-bottom: 3.2rem;
+
+	@include breakpoint (baby-bear) {
+	}
+}
+
+li {
+	@extend p;
+}
