@@ -80,6 +80,7 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin({
       patterns: [
+				{ from: 'src/.htaccess', to: '' },
         { from: 'src/favicon.gif', to: '' },
         { from: 'src/favicon.ico', to: '' },
       ],

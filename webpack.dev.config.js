@@ -2,7 +2,6 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -80,13 +79,7 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({ 
 			filename: 'assets/css/[name].css' 
-		}),
-		new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/favicon.gif', to: '' },
-        { from: 'src/favicon.ico', to: '' },
-      ],
-    }), 
+		})
 	]
 };
 
