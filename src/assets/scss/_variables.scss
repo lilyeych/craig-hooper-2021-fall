@@ -1,130 +1,124 @@
-// include $variables and @mixins in this file
-$corp1: #4B1ADD;
-$corp1Light: #96D0FF;
-$lightPeach: #FFCCC9;
-$yellow: #FFFEF2;
-$grey: #858585;
-$lightGrey: #FAFAFA;
-$darkGrey: #2F2F2F;
-$white: #F8F8F8;
-$black: #1B1B1B;
-$archive: #FBFBFB;
-$zbg: 0;
-$zcontent: 10;
-$zheader: 20;
+@use 'sass:math';
 
-@font-face {
-  font-family: 'Cooper';
-  src: url('../fonts/Cooper-Light.woff2') format('woff2'),
-       url('../fonts/Cooper-Light.woff') format('woff'), /* Pretty Modern Browsers */
-			 url('../fonts/Cooper-Light.ttf')  format('truetype');
-	font-weight: 300;
-}
+// TABLE OF CONTENT
+// - Colors
+// - Spacing
+// - Body
+// - Links
+// - Paragraphs
+// - Breakpoints
+// - Grid containers
+// - Grid columns
+// - Components
+// - Fonts
+// - Buttons
+// - Z-index
 
-@font-face {
-  font-family: 'Cooper';
-  src: url('../fonts/Cooper-Medium.woff2') format('woff2'),
-       url('../fonts/Cooper-Medium.woff') format('woff'), /* Pretty Modern Browsers */
-			 url('../fonts/Cooper-Medium.ttf')  format('truetype');
-	font-weight: 500;
-}
+// Colors
+$black:								#000000;
+$near-black:					#222222;
+$medium-grey:					#4B4B4B;
+$off-white:						#F3F3F3;
+$near-white:					#FBFBFB;
+$white:								#FFFFFF;
+$apple:								#ADF7B6;
+$peach:								#FFC09F;
+$lemon:								#FCF5C7;
+$plum:								#A332CA;
 
-@font-face {
-  font-family: 'Degular';
-  src: url('../fonts/Degular-Display-Bold.woff2') format('woff2'),
-       url('../fonts/Degular-Display-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-			 url('../fonts/Degular-Display-Bold.ttf')  format('truetype');
-}
+$primary:										$apple;
+$secondary:									$peach;
 
-%font-header {
-  font-family: "Degular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
+// Spacing
+$spacer: 1rem;
 
-%font-body {
-  font-family: "Cooper", "Times New Roman", Times, serif;
-}
+// Body
+$body-bg:                   $white;
+$body-color:                $medium-grey;
 
-@mixin breakpoint($point) {
-  @if $point == papa-bear {
-    @media (min-width: 1100px) { @content; }
-  }
-  @else if $point == max-papa-bear {
-    @media (max-width: 1099px) { @content; }
-  }
-  @else if $point == mama-bear {
-    @media (min-width: 960px) { @content; }
-  }
-  @else if $point == max-mama-bear {
-    @media (max-width: 959px) { @content; }
-  }
-  @else if $point == baby-bear {
-    @media (min-width: 768px)  { @content; }
-  }
-  @else if $point == max-baby-bear {
-    @media (max-width: 767px)  { @content; }
-  }
-  @else if $point == tiny-bear {
-    @media (min-width: 600px)  { @content; }
-  }
-  @else if $point == max-tiny-bear {
-    @media (max-width: 599px)  { @content; }
-  }
-}
+// Links
+$link-color:                inherit;
+$link-decoration:           underline;
+$link-hover-color:          $peach;
+$link-hover-decoration:     underline;
 
-@mixin vertical-align {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+// Paragraphs
+$paragraph-margin-bottom:   1rem;
 
-@mixin bg-cover {
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-}
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
-%vspacing {
-  margin-bottom: 80px;
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
 
-  @include breakpoint (mama-bear) {
-    margin-bottom: 192px;
-  }
-}
+// Grid columns
+$grid-columns:                12;
+$grid-gutter-width:           30px;
 
-.vspacing {
-  @extend %vspacing;
-}
+// Components
+$line-height-lg:              1.5;
+$line-height-sm:              1.5;
 
-%browserspacing {
-  margin-bottom: 30px;
+$transition-base:             all .3s ease-in-out;
+$transition-fade:             opacity .15s linear;
+$transition-collapse:         height .35s ease;
 
-  @include breakpoint (mama-bear) {
-    margin-bottom: 64px;
-  }
-}
+// Fonts
+$font-family-serif:      			"Degular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-family-sans-serif:      "Cooper", "Times New Roman", Times, serif;
+$font-family-heading:         $font-family-serif;
+$font-family-base:            $font-family-sans-serif;
 
-%clear {
-  &:after {
-  content: " ";
-  display: table;
-  clear: both;
-  }
-}
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25);
+$font-size-sm:                ($font-size-base * .875);
 
-%ease-in {
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          600;
+$font-weight-bold:            700;
 
-%no-bullet {
-  padding-left: 0;
-  list-style-type: none;
-}
+$font-weight-base:            $font-weight-normal;
+$line-height-base:            1.5;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$headings-margin-bottom:      math.div($spacer, 2);
+$headings-font-family:        $font-family-heading;
+$headings-font-weight:        $font-weight-normal;
+$headings-line-height:        1.2;
+$headings-color:              $near-black;
+
+$small-font-size:             80%;
+
+$list-inline-padding:         .5rem;
+
+// Z-index
+$zindex-background:                 0;
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-modal-backdrop:             1040;
+$zindex-modal:                      1050;
+$zindex-popover:                    1060;
+$zindex-tooltip:                    1070;
 
 %shadow {
 	box-shadow: 0 -12px 36px 0 rgba(0,0,0,0.08);

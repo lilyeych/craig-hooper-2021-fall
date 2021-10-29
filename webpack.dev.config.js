@@ -10,7 +10,7 @@ module.exports = {
 		filename: 'assets/js/[name].js',
 		path: path.resolve(__dirname, './dist'),
 		publicPath: '',
-		assetModuleFilename: '[name].[ext]'
+		assetModuleFilename: '[name][ext]'
   },
 	devServer: {
 		port: 9000,
@@ -49,15 +49,10 @@ module.exports = {
 				},
 				{
 					test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								name: '[name].[ext]',
-								outputPath: '../fonts'
-							}
-						}
-					]
+					type: 'asset/resource',
+					generator: {
+							filename: 'assets/fonts/[name][ext]',
+					}
 				},
 				{
 						test: /\.js$/,

@@ -10,10 +10,10 @@ module.exports = {
   mode: 'production',
   entry: './src/assets/js/app.js',
   output: {
-		filename: 'assets/js/[name].[hash].js',
+		filename: 'assets/js/[name].[chunkhash].js',
 		path: path.resolve(__dirname, './dist'),
 		publicPath: '',
-		assetModuleFilename: '[name].[hash].[ext]'
+		assetModuleFilename: '[name].[chunkhash][ext]'
   },
 	optimization: {
 		minimizer: [
@@ -47,15 +47,10 @@ module.exports = {
 				},
 				{
 					test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								name: '[name].[ext]',
-								outputPath: '../fonts'
-							}
-						}
-					]
+					type: 'asset/resource',
+					generator: {
+							filename: 'assets/fonts/[name][ext]',
+					}
 				},
 				{
 						test: /\.js$/,
@@ -76,13 +71,13 @@ module.exports = {
 			template: 'src/index.html'
 		}),
 		new MiniCssExtractPlugin({ 
-			filename: 'assets/css/[name].[hash].css' 
+			filename: 'assets/css/[name].[chunkhash].css' 
 		}),
 		new CopyWebpackPlugin({
       patterns: [
 				{ from: 'src/.htaccess', to: '' },
-        { from: 'src/favicon.gif', to: '' },
-        { from: 'src/favicon.ico', to: '' },
+        { from: 'src/favicon.gif', to: '[name].[chunkhash][ext]' },
+        { from: 'src/favicon.ico', to: '[name].[chunkhash][ext]' },
       ],
     }), 
 	]
