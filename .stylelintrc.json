@@ -11,6 +11,7 @@
 		"declaration-empty-line-before": null,
 		"comment-empty-line-before": null,
 		"no-descending-specificity": null,
+		"no-missing-end-of-source-newline": null,
 		"scss/comment-no-empty": null,
 		"scss/double-slash-comment-empty-line-before": null,
 		"scss/no-global-function-names": null

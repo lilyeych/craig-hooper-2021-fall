@@ -1,0 +1,16 @@
+[class*="btn"] {
+	display: flex;
+	height: 4.8rem;
+	align-items: center;
+	justify-content: center;
+	background-color: $near-black;
+	border-radius: 50%;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn {
+	&-icon {
+		width: 4.8rem;
+	}
+}

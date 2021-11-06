@@ -1,0 +1,26 @@
+.page-nav {
+	padding: 4.3rem 6rem;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+
+		li {
+			display: inline-block;
+
+			&.avatar {
+				display: block;
+				width: 70px;
+				height: auto;
+				margin-bottom: 16px;
+				transition: all 0.1s;
+
+				&:hover {
+					@include breakpoint-up(md) {
+						animation: spin 0.25s linear infinite;
+					}
+				}
+			}
+		}
+	}
+}
