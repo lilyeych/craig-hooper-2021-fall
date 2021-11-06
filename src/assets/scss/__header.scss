@@ -2,6 +2,7 @@ header {
 	margin-top: 32px;
 	margin-bottom: 12px;
 	text-align: left;
+
 	@include breakpoint (baby-bear) {
 		margin-top: 128px;
 		margin-bottom: 16px;
@@ -24,7 +25,7 @@ header {
       border-radius: 50%;
     }
   }
-  
+
   .tag {
     color: $grey;
   }

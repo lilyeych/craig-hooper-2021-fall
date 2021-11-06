@@ -1,7 +1,6 @@
 .pace {
   -webkit-pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
+  user-select: none;
 }
 
 .pace-running {
@@ -14,21 +13,21 @@
 }
 
 .pace-container {
-  opacity: 0;
+  opacity: 0%;
 }
 
 .pace-done {
   .pace-container {
-    opacity: 1;
+    opacity: 100%;
   }
 }
 
 .pace .pace-progress {
-  background-color: $corp1;
   position: fixed;
   z-index: 99999;
   top: 0;
   right: 100%;
   width: 100%;
   height: 5px;
+  background-color: $corp1;
 }

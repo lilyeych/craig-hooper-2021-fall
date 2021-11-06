@@ -2,6 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PostHtmlHintPlugin = require('posthtml-hint');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
@@ -77,8 +78,9 @@ module.exports = {
 			filename: 'assets/css/[name].css' 
 		}),
 		new StylelintPlugin({
-      files: ['src/**/*.{css,scss,sass}'],
-    })
+      files: ['**/*.{css,scss,sass}'],
+    }),
+		new PostHtmlHintPlugin()
 	]
 };
 

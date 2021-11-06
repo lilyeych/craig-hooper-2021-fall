@@ -30,14 +30,14 @@
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       // Provide basic `.col-{bp}` classes for equal-width flexbox columns
       .col#{$infix} {
+        max-width: 100%;
         flex-basis: 0;
         flex-grow: 1;
-        max-width: 100%;
       }
       .col#{$infix}-auto {
-        flex: 0 0 auto;
         width: auto;
         max-width: none; // Reset earlier grid tiers
+        flex: 0 0 auto;
       }
 
       @for $i from 1 through $columns {

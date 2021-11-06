@@ -1,10 +1,18 @@
 {
 	"plugins": [
-		"stylelint-scss",
-		"stylelint-order"
+		"stylelint-scss"
 	],
 	"extends": [
-		"stylelint-config-standard",
-		"stylelint-config-prettier"
-	]
+		"stylelint-config-standard-scss",
+		"stylelint-config-idiomatic-order"
+	],
+	"rules": {
+		"indentation": null,
+		"declaration-empty-line-before": null,
+		"comment-empty-line-before": null,
+		"no-descending-specificity": null,
+		"scss/comment-no-empty": null,
+		"scss/double-slash-comment-empty-line-before": null,
+		"scss/no-global-function-names": null
+	}
 }

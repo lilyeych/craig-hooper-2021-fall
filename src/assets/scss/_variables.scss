@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 // TABLE OF CONTENT
 // - Colors
@@ -15,35 +15,34 @@
 // - Z-index
 
 // Colors
-$black:								#000000;
-$near-black:					#222222;
-$medium-grey:					#4B4B4B;
-$off-white:						#F3F3F3;
-$near-white:					#FBFBFB;
-$white:								#FFFFFF;
-$apple:								#ADF7B6;
-$peach:								#FFC09F;
-$lemon:								#FCF5C7;
-$plum:								#A332CA;
-
-$primary:										$apple;
-$secondary:									$peach;
+$black: #000;
+$near-black: #222;
+$medium-grey: #4b4b4b;
+$off-white: #f3f3f3;
+$near-white: #fbfbfb;
+$white: #fff;
+$apple: #adf7b6;
+$peach: #ffc09f;
+$lemon: #fcf5c7;
+$plum: #a332ca;
+$primary: $apple;
+$secondary: $peach;
 
 // Spacing
 $spacer: 1rem;
 
 // Body
-$body-bg:                   $white;
-$body-color:                $medium-grey;
+$body-bg: $white;
+$body-color: $medium-grey;
 
 // Links
-$link-color:                inherit;
-$link-decoration:           underline;
-$link-hover-color:          $peach;
-$link-hover-decoration:     underline;
+$link-color: inherit;
+$link-decoration: underline;
+$link-hover-color: $peach;
+$link-hover-decoration: underline;
 
 // Paragraphs
-$paragraph-margin-bottom:   1rem;
+$paragraph-margin-bottom: 1rem;
 
 // Breakpoints
 $breakpoints: (
@@ -64,62 +63,54 @@ $container-max-widths: (
 );
 
 // Grid columns
-$grid-columns:                12;
-$grid-gutter-width:           30px;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
 
 // Components
-$line-height-lg:              1.5;
-$line-height-sm:              1.5;
-
-$transition-base:             all .3s ease-in-out;
-$transition-fade:             opacity .15s linear;
-$transition-collapse:         height .35s ease;
+$line-height-lg: 1.5;
+$line-height-sm: 1.5;
+$transition-base: all 0.3s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
 
 // Fonts
-$font-family-serif:      			"Degular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$font-family-sans-serif:      "Cooper", "Times New Roman", Times, serif;
-$font-family-heading:         $font-family-serif;
-$font-family-base:            $font-family-sans-serif;
-
-$font-size-base:              1rem; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.25);
-$font-size-sm:                ($font-size-base * .875);
-
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-medium:          600;
-$font-weight-bold:            700;
-
-$font-weight-base:            $font-weight-normal;
-$line-height-base:            1.5;
-
-$h1-font-size:                $font-size-base * 2.5;
-$h2-font-size:                $font-size-base * 2;
-$h3-font-size:                $font-size-base * 1.75;
-$h4-font-size:                $font-size-base * 1.5;
-$h5-font-size:                $font-size-base * 1.25;
-$h6-font-size:                $font-size-base;
-
-$headings-margin-bottom:      math.div($spacer, 2);
-$headings-font-family:        $font-family-heading;
-$headings-font-weight:        $font-weight-normal;
-$headings-line-height:        1.2;
-$headings-color:              $near-black;
-
-$small-font-size:             80%;
-
-$list-inline-padding:         .5rem;
+$font-family-serif: "Degular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-family-sans-serif: "Cooper", "Times New Roman", times, serif;
+$font-family-heading: $font-family-serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * 0.875);
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+$headings-margin-bottom: math.div($spacer, 2);
+$headings-font-family: $font-family-heading;
+$headings-font-weight: $font-weight-normal;
+$headings-line-height: 1.2;
+$headings-color: $near-black;
+$small-font-size: 80%;
+$list-inline-padding: 0.5rem;
 
 // Z-index
-$zindex-background:                 0;
-$zindex-dropdown:                   1000;
-$zindex-sticky:                     1020;
-$zindex-fixed:                      1030;
-$zindex-modal-backdrop:             1040;
-$zindex-modal:                      1050;
-$zindex-popover:                    1060;
-$zindex-tooltip:                    1070;
+$zindex-background: 0;
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-modal: 1050;
+$zindex-popover: 1060;
+$zindex-tooltip: 1070;
 
 %shadow {
-	box-shadow: 0 -12px 36px 0 rgba(0,0,0,0.08);
+	box-shadow: 0 -12px 36px 0 rgb(0 0 0 / 8%);
 }
