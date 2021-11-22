@@ -1,6 +1,11 @@
 [class*="shape-"] {
-	position: absolute;
-	z-index: $zindex-background;
+	display: none;
+
+	@include breakpoint-up(xl) {
+		position: absolute;
+		z-index: $zindex-background;
+		display: block;
+	}
 }
 
 .page-intro {

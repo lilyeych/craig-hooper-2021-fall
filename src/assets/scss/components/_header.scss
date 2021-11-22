@@ -1,5 +1,9 @@
 .header-nav {
-	padding: 3.2rem 6rem;
+	padding: 1.6rem 1.5rem;
+
+	@include breakpoint-up(lg) {
+		padding: 3.2rem 6rem;
+	}
 
 	ul {
 		display: flex;
@@ -17,7 +21,7 @@
 				transition: all $transition-speed;
 
 				&:hover {
-					@include breakpoint-up(md) {
+					@include breakpoint-up(lg) {
 						animation: spin 0.25s linear infinite;
 					}
 				}

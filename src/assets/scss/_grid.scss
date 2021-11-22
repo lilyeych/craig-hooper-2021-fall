@@ -1,15 +1,18 @@
 .container {
-	display: grid;
 	width: 100%;
 	max-width: 120rem;
-	padding-right: 1.5rem;
-	padding-left: 1.5rem;
+	padding-right: calc($grid-gutter-width / 2);
+	padding-left: calc($grid-gutter-width / 2);
 	margin: 0 auto;
-  gap: $grid-gutter-width;
-	grid-template-columns: repeat(12, [col-start] 1fr);
 
-	.col {
-		margin-right: calc($grid-gutter-width / 2);
-		margin-left: calc($grid-gutter-width / 2);
+	@include breakpoint-up(lg) {
+		display: grid;
+		width: 90%;
+		gap: $grid-gutter-width;
+		grid-template-columns: repeat(12, [col-start] 1fr);
+	}
+
+	@include breakpoint-up(xl) {
+		width: 100%;
 	}
 }
