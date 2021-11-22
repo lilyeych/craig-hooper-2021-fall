@@ -1,9 +1,11 @@
-.page-nav {
-	padding: 4.3rem 6rem;
+.header-nav {
+	padding: 3.2rem 6rem;
 
 	ul {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
+		margin: 0;
 
 		li {
 			display: inline-block;
@@ -12,8 +14,7 @@
 				display: block;
 				width: 70px;
 				height: auto;
-				margin-bottom: 16px;
-				transition: all 0.1s;
+				transition: all $transition-speed;
 
 				&:hover {
 					@include breakpoint-up(md) {
@@ -21,6 +22,24 @@
 					}
 				}
 			}
+
+			&:nth-child(3) {
+				margin-left: 2.2rem;
+			}
 		}
+	}
+}
+
+.avatar-dark {
+	display: none;
+}
+
+.dark {
+	.avatar-dark {
+		display: block;
+	}
+
+	.avatar-light {
+		display: none;
 	}
 }

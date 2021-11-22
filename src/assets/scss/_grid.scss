@@ -1,21 +1,15 @@
 .container {
+	display: grid;
 	width: 100%;
-	max-width: 114rem;
+	max-width: 120rem;
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
 	margin: 0 auto;
-}
-
-.grid {
-	display: grid;
-	// grid-template-columns: repeat( auto-fit, minmax(65px, 1fr) );
-  gap: 3rem;
-  /* grid-template-columns: repeat(12, 1fr); */
+  gap: $grid-gutter-width;
 	grid-template-columns: repeat(12, [col-start] 1fr);
 
-	.col-1 {
-		height: 5rem;
-		background-color: #000;
-		grid-column: span 1;
+	.col {
+		margin-right: calc($grid-gutter-width / 2);
+		margin-left: calc($grid-gutter-width / 2);
 	}
 }

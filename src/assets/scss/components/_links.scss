@@ -1,0 +1,53 @@
+[class*="link"] {
+	position: relative;
+
+	&::after {
+		opacity: 0%;
+	}
+
+	&:active,
+	&:hover,
+	&:focus {
+		&::after {
+			position: absolute;
+			top: -0.3rem;
+			left: calc(50% - 1.8rem);
+			width: 3.6rem;
+			height: 3.6rem;
+			background-repeat: no-repeat;
+			background-size: 3.6rem 3.6rem;
+			content: "";
+			opacity: 100%;
+		}
+	}
+}
+
+.link-twitter {
+	&:active,
+	&:hover,
+	&:focus {
+		&::after {
+			background-image: url("../img/emoji-cry.png");
+		}
+	}
+}
+
+.link-instagram {
+	&:active,
+	&:hover,
+	&:focus {
+		&::after {
+			background-image: url("../img/emoji-explode.png");
+		}
+	}
+}
+
+.link-linkedin {
+	&:active,
+	&:hover,
+	&:focus {
+		&::after {
+			background-image: url("../img/emoji-barf.png");
+		}
+	}
+}

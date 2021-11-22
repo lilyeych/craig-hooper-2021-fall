@@ -1,8 +1,11 @@
+// * {
+// 	transition: all $transition-speed;
+// }
+
 html {
   font-family: $font-family-base;
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
-	line-height: 1.15;
   -ms-overflow-style: scrollbar;
 	text-rendering: optimizeLegibility;
 }
@@ -14,10 +17,14 @@ body {
   background-color: $body-bg;
   color: $body-color;
   font-family: $font-family-base;
-  font-size: $font-size-base;
   font-weight: $font-weight-base;
-  line-height: $line-height-base;
   text-align: left;
+	transition: all $transition-speed;
+
+	&.dark {
+		background-color: $near-black;
+		color: $near-white;
+	}
 }
 
 [tabindex="-1"]:focus {
@@ -28,4 +35,9 @@ body {
 button {
 	border: none;
 	background-color: transparent;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }

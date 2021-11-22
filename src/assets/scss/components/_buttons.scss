@@ -7,6 +7,11 @@
 	border-radius: 50%;
 	cursor: pointer;
 	text-align: center;
+	transition: all $transition-speed;
+}
+
+.dark [class*="btn"] {
+	background-color: $near-white;
 }
 
 .btn {

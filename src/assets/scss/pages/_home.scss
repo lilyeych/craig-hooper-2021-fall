@@ -1,3 +1,7 @@
 body {
-	background: #fff url("../img/bg-light@2x.png") center top repeat;
+	background: $near-white url("../img/bg-light.png") center top repeat;
+
+	&.dark {
+		background: $near-black url("../img/bg-dark.png");
+	}
 }

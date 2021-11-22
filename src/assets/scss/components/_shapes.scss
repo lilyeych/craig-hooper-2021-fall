@@ -1,0 +1,64 @@
+[class*="shape-"] {
+	position: absolute;
+	z-index: $zindex-background;
+}
+
+.page-intro {
+	position: relative;
+	
+	.shape-squiggle {
+		top: 16rem;
+		left: -29rem;
+	}
+
+	.shape-cheese {
+		right: -45rem;
+		bottom: 70rem;
+	}
+
+	.shape-tube-2 {
+		right: -30rem;
+		bottom: 0;
+	}
+}
+
+.project-intro {
+	.shape-cheese {
+		right: -22rem;
+		bottom: -2rem;
+	}
+
+	.shape-pill-1 {
+		top: 20rem;
+		left: 24.5rem;
+	}
+
+	.shape-pill-2 {
+		bottom: -10rem;
+		left: -10rem;
+	}
+
+	.shape-squiggle {
+		bottom: 6rem;
+		left: -9rem;
+	}
+
+	.shape-tube-1 {
+		top: -7rem;
+		right: 20rem;
+	}
+}
+
+.project-container {
+	position: relative;
+
+	.shape-cheese {
+		right: -12rem;
+		bottom: -6rem;
+	}
+
+	.shape-tube-1 {
+		right: 30rem;
+		bottom: -1.5rem;
+	}
+}

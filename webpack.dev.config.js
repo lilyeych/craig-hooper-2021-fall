@@ -57,6 +57,13 @@ module.exports = {
 					}
 				},
 				{
+					test: require.resolve("jquery"),
+					loader: "expose-loader",
+					options: {
+						exposes: ["$", "jQuery"],
+					},
+				},
+				{
 						test: /\.js$/,
 						exclude: /node_modules/,
 						use: {

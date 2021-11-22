@@ -1,0 +1,13 @@
+[class*="icon-"] {
+	g {
+		stroke: $near-white;
+	}
+}
+
+.dark {
+	[class*="icon-"] {
+		g {
+			stroke: $near-black;
+		}
+	}
+}
