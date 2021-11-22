@@ -1,6 +1,8 @@
 %animated {
+	animation-delay: 0.5s;
   animation-duration: 1s;
   animation-fill-mode: both;
+	opacity: 0%;
   transform: translate3d(0, 0, 0);
 }
 
@@ -19,6 +21,7 @@
 }
 
 .fade-in {
+	@extend %animated;
   animation-name: fade-in;
 }
 

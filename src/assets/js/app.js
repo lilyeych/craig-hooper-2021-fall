@@ -7,4 +7,5 @@ import './img-optimization.js';
 import './scroll-top.js';
 import './count-days.js';
 import './change-theme.js';
-import './global.js';
+import './parallax.js';
+import './animate.js';
