@@ -13,7 +13,7 @@ module.exports = {
 		filename: 'assets/js/[name].[chunkhash].js',
 		path: path.resolve(__dirname, './dist'),
 		publicPath: '',
-		assetModuleFilename: '[name].[chunkhash][ext]'
+		// assetModuleFilename: 'assets/img/[name].[hash][ext][query]'
   },
 	optimization: {
 		minimizer: [
@@ -30,27 +30,53 @@ module.exports = {
 					]
 				},
 				{
-						test: /\.(svg|png|jpg|gif|ico)$/,
-						type: 'asset/resource'
+					test: /\.(svg|png|jpg|gif|ico)$/,
+					type: 'asset/resource',
+					generator: {
+						filename: 'assets/img/[name].[hash][ext][query]',
+					}
+				},
+				{
+					test: /\.(svg|png|jpg|gif|ico)$/,
+					type: 'asset/resource',
+					include: [
+						path.resolve(__dirname, "assets/favicon")
+					],
+					generator: {
+						filename: '[name].[hash][ext][query]',
+					}
 				},
 				{
 					test: /\.css$/,
 					use: [
-						MiniCssExtractPlugin.loader, 'css-loader'
-					]
+						MiniCssExtractPlugin.loader, "css-loader",
+					],
 				},
 				{
 					test: /\.scss$/,
 					use: [
-						MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'
-					]
+						{
+							loader: MiniCssExtractPlugin.loader,
+							options: {
+								publicPath: "../../",
+							},
+						},
+						'css-loader', 'postcss-loader', 'sass-loader'
+					],
 				},
 				{
 					test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
 					type: 'asset/resource',
 					generator: {
-							filename: 'assets/fonts/[name][ext]',
+							filename: 'assets/fonts/[name][ext][query]',
 					}
+				},
+				{
+					test: require.resolve("jquery"),
+					loader: "expose-loader",
+					options: {
+						exposes: ["$", "jQuery"],
+					},
 				},
 				{
 						test: /\.js$/,
@@ -76,8 +102,6 @@ module.exports = {
 		new CopyWebpackPlugin({
       patterns: [
 				{ from: 'src/.htaccess', to: '' },
-        { from: 'src/favicon.gif', to: '[name].[chunkhash][ext]' },
-        { from: 'src/favicon.ico', to: '[name].[chunkhash][ext]' },
       ],
     }), 
 	]

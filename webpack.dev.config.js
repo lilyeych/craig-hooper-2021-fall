@@ -12,7 +12,6 @@ module.exports = {
 		filename: 'assets/js/[name].js',
 		path: path.resolve(__dirname, './dist'),
 		publicPath: '',
-		assetModuleFilename: '[name][ext]'
   },
 	devServer: {
 		port: 9000,
@@ -34,20 +33,29 @@ module.exports = {
 					]
 				},
 				{
-						test: /\.(svg|png|jpg|gif|ico)$/,
-						type: 'asset/resource'
+					test: /\.(svg|png|jpg|gif|ico)$/,
+					type: 'asset/resource',
+					generator: {
+						filename: 'assets/img/[name][ext]',
+					}
 				},
 				{
 					test: /\.css$/,
 					use: [
 						'style-loader', 'css-loader'
-					]
+					],
+					generator: {
+						filename: 'assets/css/[name][ext]',
+					}
 				},
 				{
 					test: /\.scss$/,
 					use: [
 						'style-loader', 'css-loader', 'postcss-loader', 'sass-loader'
-					]
+					],
+					generator: {
+						filename: 'assets/scss/[name][ext]',
+					}
 				},
 				{
 					test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
