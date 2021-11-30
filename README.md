@@ -1,11 +1,12 @@
 ## Initial Setup
 * `shift + control + tick` Open Terminal on VS Code
 * `nvm install v17.0.1`
-
+* `npm i`
+* 
 ## How to Make Updates
 * `shift + control + tick`
 * `nvm use v17.0.1`
-* `npm run watch`
+* `npm run dev`
 * Edit files in src folder
 * `ctrl + c` to exit
 
