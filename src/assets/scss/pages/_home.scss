@@ -1,5 +1,6 @@
 body {
 	background: $near-white url("../img/bg-light.png") center top repeat;
+	overflow-x: hidden;
 
 	&.dark {
 		background: $near-black url("../img/bg-dark.png");
