@@ -13,3 +13,19 @@
 		content: "";
 	}
 }
+
+.home {
+	.page-intro {
+		&::before {
+			background-image: url("../img/emoji-bolt.png");
+		}
+	}
+}
+
+.fourohfour {
+	.page-intro {
+		&::before {
+			background-image: url("../img/emoji-hmm.png");
+		}
+	}
+}

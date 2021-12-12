@@ -1,0 +1,26 @@
+.fourohfour {
+	body {
+		background: $near-black url("../img/bg-404.jpg") center center no-repeat;
+		background-size: cover;
+		overflow-x: hidden;
+
+		.content {
+			@include vertical-middle;
+			margin-top: -10.2rem;
+
+			@include breakpoint-up(lg) {
+				margin-top: -13.4rem;
+			}
+		}
+
+		.page-intro {
+			color: $near-white;
+			text-align: center;
+
+			img {
+				width: 100%;
+				margin-bottom: 1.6rem;
+			}
+		}
+	}
+}
