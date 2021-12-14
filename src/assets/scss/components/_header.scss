@@ -1,8 +1,8 @@
 .header-nav {
-	padding: 1.6rem 1.5rem;
+	padding: $spacer4-sm $grid-gutter-width-sm;
 
 	@include breakpoint-up(lg) {
-		padding: 3.2rem 6rem;
+		padding: $spacer4-lg 6rem;
 	}
 
 	ul {
@@ -16,7 +16,7 @@
 
 			&.avatar {
 				display: block;
-				width: 70px;
+				width: 7rem;
 				height: auto;
 				transition: all $transition-speed;
 

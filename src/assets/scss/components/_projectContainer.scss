@@ -1,13 +1,13 @@
 .project-container {
 	overflow: hidden;
-	padding: 1.6rem 0;
-	margin: 0 1.5rem;
+	padding: $spacer6-sm 0;
+	margin: 0 $grid-gutter-width-sm $spacer2-sm;
 	background-color: $off-white;
 	border-radius: $border-radius;
 
 	@include breakpoint-up(lg) {
-		padding: 12.8rem 0;
-		margin: 0 1.5rem 1.6rem;
+		padding: $spacer6-lg 0;
+		margin: 0 $grid-gutter-width-lg $spacer2-lg;
 	}
 
 	.container {

@@ -1,134 +1,47 @@
-[class*="shape-"] {
-	display: none;
-
-	@include breakpoint-up(xl) {
-		position: absolute;
-		z-index: $zindex-background;
-		display: block;
-	}
+.shapes {
+	position: absolute;
+	top: 36rem;
+	right: 0;
+	left: 0;
+	width: 100%;
+	max-width: 122rem;
+	margin: 0 auto;
 }
 
-.page-intro {
+.shapes-group {
 	position: relative;
+
+	img {
+		display: none;
 	
-	.shape-squiggle {
-		top: 16rem;
-		left: -29rem;
-	}
+		@include breakpoint-up(xl) {
+			// position: absolute;
+			position: relative;
+			z-index: $zindex-background;
+			display: block;
 
-	.shape-cheese {
-		right: -45rem;
-		bottom: 35rem;
-	}
-
-	.shape-tube-2 {
-		right: -25rem;
-		bottom: 0;
-	}
-}
-
-.project-section {
-	&:nth-of-type(1) {
-		.project-intro {
-			.shape-pill-1 {
-				top: 25rem;
-				left: 24.5rem;
-			}
-		}
-	}
-
-	&:nth-of-type(2) {
-		.project-intro {
-			.shape-cheese {
-				right: -22rem;
-				bottom: -28rem;
-			}
-		
-			.shape-pill-2 {
-				bottom: -26rem;
-				left: -10rem;
-			}
-		
-			.shape-squiggle {
-				bottom: -16rem;
-				left: -9rem;
+			&:nth-child(6n-5) {
+				margin: 0 11.5rem 19.6rem auto;
 			}
 
-			.shape-tube-1 {
-				top: -27rem;
-				right: 20rem;
-			}
-		}
-	}
-
-	&:nth-of-type(3) {
-		.project-intro {
-			.shape-cheese {
-				right: -22rem;
-				bottom: -32rem;
-			}
-		
-			.shape-pill-2 {
-				bottom: -40rem;
-				left: 10rem;
-			}
-		
-			.shape-squiggle {
-				bottom: -20rem;
-				left: -9rem;
+			&:nth-child(6n-4) {
+				margin: 0 auto 2rem 11.5rem;
 			}
 
-			.shape-tube-1 {
-				top: -47rem;
-				right: 20rem;
+			&:nth-child(6n-3) {
+				margin: 0 -10rem 10rem auto;
 			}
-		}
-	}
 
-	&:nth-of-type(4) {
-		.project-intro {
-			.shape-cheese {
-				right: -22rem;
-				bottom: -72rem;
+			&:nth-child(6n-2) {
+				margin: 0 auto 25rem -8.5rem;
 			}
-		
-			.shape-pill-2 {
-				bottom: -60rem;
-				left: -10rem;
-			}
-		
-			.shape-squiggle {
-				bottom: -60rem;
-				left: -9rem;
-			}
-		
-			.shape-tube-1 {
-				top: -67rem;
-				right: 20rem;
-			}
-		}
-	}
 
-	&:nth-of-type(5) {
-		.project-intro {
-			.shape-cheese {
-				right: -22rem;
-				bottom: -112rem;
+			&:nth-child(6n-1) {
+				margin: 0 auto 38rem 21.5rem;
 			}
-		
-			.shape-pill-2 {
-				bottom: -100rem;
-				left: -10rem;
-			}
-		
-			.shape-squiggle {
-				bottom: -100rem;
-				left: -9rem;
-			}
-		
-			.shape-tube-1 {
-				top: -87rem;
-				right: 20rem;
+
+			&:nth-child(6n) {
+				margin: 0 20rem 13rem auto;
 			}
 		}
 	}

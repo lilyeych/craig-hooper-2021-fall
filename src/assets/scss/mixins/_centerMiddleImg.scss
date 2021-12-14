@@ -1,0 +1,18 @@
+@mixin center-middle-img() {
+	@include breakpoint-up(lg) {
+		$col-width-lx: calc((90vw - (12 * $gutter)) / 12); // 70px
+
+		$available-width-xl: calc($col-width-lx * 4 + $gutter * 3); // 370px
+		$img-width-xl: calc($col-width-lx * 3 + $gutter * 2); // 270px
+		margin-right: auto;
+		margin-left: calc(($available-width-xl - $img-width-xl) / 2);
+	}
+
+	@include breakpoint-up(xl) {
+		$col-width-lx: calc(($grid-width - (12 * $gutter)) / 12); // 70px
+
+		$available-width-xl: calc($col-width-lx * 4 + $gutter * 3); // 370px
+		$img-width-xl: calc($col-width-lx * 3 + $gutter * 2); // 270px
+		margin-left: calc(($available-width-xl - $img-width-xl) / 2);
+	}
+}

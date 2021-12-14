@@ -15,6 +15,7 @@
 		"no-missing-end-of-source-newline": null,
 		"scss/comment-no-empty": null,
 		"scss/double-slash-comment-empty-line-before": null,
+		"scss/dollar-variable-empty-line-before": null,
 		"scss/no-global-function-names": null
 	}
 }

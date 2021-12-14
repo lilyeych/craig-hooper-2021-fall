@@ -1,14 +1,16 @@
 .container {
 	width: 100%;
-	max-width: 120rem;
-	padding-right: calc($grid-gutter-width / 2);
-	padding-left: calc($grid-gutter-width / 2);
+	max-width: $grid-width;
+	padding-right: $grid-gutter-width-sm;
+	padding-left: $grid-gutter-width-sm;
 	margin: 0 auto;
 
 	@include breakpoint-up(lg) {
 		display: grid;
 		width: 90%;
-		gap: $grid-gutter-width;
+		padding-right: $grid-gutter-width-lg;
+		padding-left: $grid-gutter-width-lg;
+		gap: ($grid-gutter-width-lg * 2);
 		grid-template-columns: repeat(12, [col-start] 1fr);
 	}
 

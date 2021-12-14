@@ -39,9 +39,9 @@
 	}
 
 	&:nth-child(2) {
+		@include center-middle-img;
+
 		@include breakpoint-up(lg) {
-			margin-right: auto;
-			margin-left: calc((100vw - 3rem - 80rem) / 12);
 			grid-column: span 3;
 		}
 	}

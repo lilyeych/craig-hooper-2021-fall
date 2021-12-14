@@ -1,6 +1,16 @@
 @font-face {
 	font-display: swap;
   font-family: Everett;
+	font-weight: 300;
+  src:
+ 		url("../fonts/Everett-Light.woff2") format("woff2"),
+		url("../fonts/Everett-Light.woff") format("woff"),
+		url("../fonts/Everett-Light.ttf")  format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+  font-family: Everett;
 	font-weight: 400;
   src:
  		url("../fonts/TWKEverett-Regular-web.woff2") format("woff2"),

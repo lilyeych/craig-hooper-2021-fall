@@ -1,16 +1,16 @@
 .project-intro {
 	position: relative;
-	padding-top: 4.8rem;
+	padding-top: $spacer7-sm;
 	padding-bottom: 8.4rem;
 
 	@include breakpoint-up(lg) {
-		padding-top: 14.4rem;
+		padding-top: $spacer7-lg;
 		padding-bottom: 11.6rem;
 	}
 
 	&::after {
 		position: absolute;
-		bottom: 2.4rem;
+		bottom: $spacer5-sm;
 		left: calc(50% - 1.8rem);
 		width: 3.6rem;
 		height: 3.6rem;
@@ -19,7 +19,7 @@
 		content: "";
 
 		@include breakpoint-up(lg) {
-			bottom: 3.2rem;
+			bottom: $spacer4-lg;
 		}
 	}
 

@@ -1,5 +1,5 @@
 .page-footer {
-	padding: 8rem 0 2.4rem;
+	padding: $spacer1-lg 0 $spacer3-lg;
 
 	.footer-nav {
 		ul {
@@ -10,7 +10,7 @@
 
 			li {
 				display: inline-block;
-				margin: 0 calc($grid-gutter-width / 2);
+				margin: 0 $grid-gutter-width-lg;
 			}
 		}
 	}

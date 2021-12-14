@@ -31,7 +31,23 @@ $primary: $apple;
 $secondary: $peach;
 
 // Spacing
-$spacer: 1rem;
+$spacer-base: 0.8rem;
+
+$spacer1-sm: $spacer-base; // 8px
+$spacer2-sm: $spacer-base * 2; // 16px
+$spacer3-sm: $spacer-base * 2; // 16px
+$spacer4-sm: $spacer-base * 2; // 16px
+$spacer5-sm: $spacer-base * 3; // 24px
+$spacer6-sm: $spacer-base * 2; // 16px
+$spacer7-sm: $spacer-base * 6; // 48px
+
+$spacer1-lg: $spacer-base; // 8px
+$spacer2-lg: $spacer-base * 2; // 16px
+$spacer3-lg: $spacer-base * 3; // 24px
+$spacer4-lg: $spacer-base * 4; // 32px
+$spacer5-lg: $spacer-base * 6; // 48px
+$spacer6-lg: $spacer-base * 16; // 128px
+$spacer7-lg: $spacer-base * 18; // 144px
 
 // Body
 $body-bg: $white;
@@ -66,7 +82,10 @@ $container-max-widths: (
 
 // Grid columns
 $grid-columns: 12;
-$grid-gutter-width: 3rem;
+$grid-width: 120rem;
+$grid-gutter-width-sm: 2rem;
+$grid-gutter-width-lg: 1.5rem;
+$gutter: $grid-gutter-width-lg * 2;
 
 // Components
 $line-height-lg: 1.5;
@@ -85,7 +104,7 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 600;
 $font-weight-bold: 700;
-$font-weight-base: $font-weight-normal;
+$font-weight-base: $font-weight-light;
 $headings-font-family: $font-family-heading;
 $headings-font-weight: $font-weight-normal;
 $list-inline-padding: 5rem;
