@@ -10,3 +10,4 @@ import './shapes.js';
 import './change-theme.js';
 import './parallax.js';
 import './animate.js';
+import './infinite-scroll.js';
