@@ -1,5 +1,6 @@
 .shapes {
 	position: absolute;
+	z-index: $zindex-background;
 	top: 36rem;
 	right: 0;
 	left: 0;
@@ -15,9 +16,7 @@
 		display: none;
 	
 		@include breakpoint-up(xl) {
-			// position: absolute;
 			position: relative;
-			z-index: $zindex-background;
 			display: block;
 
 			&:nth-child(6n-5) {
