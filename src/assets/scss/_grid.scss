@@ -5,6 +5,10 @@
 	padding-left: $grid-gutter-width-sm;
 	margin: 0 auto;
 
+	img {
+		align-self: center;
+	}
+
 	@include breakpoint-up(lg) {
 		display: grid;
 		width: 90%;
