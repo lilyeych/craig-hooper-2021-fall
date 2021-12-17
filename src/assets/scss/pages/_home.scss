@@ -1,8 +1,16 @@
 body {
-	background: $near-white url("../img/bg-light.png") center top repeat;
+	background: $near-white url("../img/bg-light-mobile.png") center top repeat;
 	overflow-x: hidden;
 
+	@include breakpoint-up(lg) {
+		background-image: url("../img/bg-light.png");
+	}
+
 	&.dark {
-		background: $near-black url("../img/bg-dark.png");
+		background: $near-black url("../img/bg-dark-mobile.png");
+
+		@include breakpoint-up(lg) {
+			background-image: url("../img/bg-dark.png");
+		}
 	}
 }
