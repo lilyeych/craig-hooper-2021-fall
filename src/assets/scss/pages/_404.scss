@@ -8,7 +8,7 @@
 			@include vertical-middle;
 			margin-top: -10.2rem;
 
-			@include breakpoint-up(md) {
+			@include breakpoint-up(lg) {
 				margin-top: -13.4rem;
 			}
 		}

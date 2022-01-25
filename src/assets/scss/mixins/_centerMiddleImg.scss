@@ -1,5 +1,5 @@
 @mixin center-middle-img() {
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		$col-width-lx: calc((90vw - (12 * $gutter)) / 12); // 70px
 
 		$available-width-xl: calc($col-width-lx * 4 + $gutter * 3); // 370px

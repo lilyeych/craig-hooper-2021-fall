@@ -1,7 +1,7 @@
 .header-nav {
 	padding: $spacer4-sm $grid-gutter-width-sm;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		padding: $spacer4-lg 6rem;
 	}
 
@@ -21,7 +21,7 @@
 				transition: all $transition-speed;
 
 				&:hover {
-					@include breakpoint-up(md) {
+					@include breakpoint-up(lg) {
 						animation: spin 0.25s linear infinite;
 					}
 				}

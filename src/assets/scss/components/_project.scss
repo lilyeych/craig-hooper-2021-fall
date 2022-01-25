@@ -12,7 +12,7 @@
 .project-desktop {
 	border-radius: $border-radius-mobile;
 	
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		border-radius: $border-radius-desktop;
 		grid-column: 2/12;
 	}
@@ -23,18 +23,25 @@
 	width: 31%;
 	border-radius: 1.5rem;
 
+	@include breakpoint-up(sm) {
+		border-radius: 2.2rem;
+	}
+
 	@include breakpoint-up(md) {
 		border-radius: 3.25rem;
 	}
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		display: block;
 		width: 100%;
+	}
+
+	@include breakpoint-up(xl) {
 		border-radius: 4.25rem;
 	}
 
 	&:nth-child(1) {
-		@include breakpoint-up(md) {
+		@include breakpoint-up(lg) {
 			grid-column: 2/5;
 		}
 	}
@@ -42,13 +49,13 @@
 	&:nth-child(2) {
 		@include center-middle-img;
 
-		@include breakpoint-up(md) {
+		@include breakpoint-up(lg) {
 			grid-column: span 3;
 		}
 	}
 
 	&:nth-child(3) {
-		@include breakpoint-up(md) {
+		@include breakpoint-up(lg) {
 			grid-column: 9/12;
 		}
 	}

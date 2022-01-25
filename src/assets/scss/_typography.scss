@@ -23,7 +23,7 @@ h1,
 	font-size: 3.6rem;
 	line-height: 4.2rem;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		margin-bottom: $spacer4-lg;
 		font-size: 6.4rem;
 		line-height: 6.4rem;
@@ -37,7 +37,7 @@ h2,
 	font-size: 3rem;
 	line-height: 3.6rem;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		font-size: 4.8rem;
 		line-height: 5.4rem;
 	}
@@ -50,7 +50,7 @@ h3,
 	font-size: 2.4rem;
 	line-height: 3rem;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		font-size: 3.6rem;
 		line-height: 4.2rem;
 	}
@@ -76,7 +76,7 @@ h4,
 	font-size: 2.4rem;
 	line-height: 3.4rem;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		margin-bottom: $spacer4-lg;
 		font-size: 3.2rem;
 		line-height: 4.2rem;
@@ -90,7 +90,7 @@ h5,
 	font-size: 1.8rem;
 	line-height: 2.8rem;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		margin-bottom: $spacer4-lg;
 		font-size: 2.4rem;
 		line-height: 3.4rem;
@@ -106,7 +106,7 @@ small,
 	font-size: 1.4rem;
 	line-height: 2.4rem;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		font-size: 1.6rem;
 		line-height: 2.6rem;
 	}
@@ -118,7 +118,7 @@ p {
 	font-size: 1.6rem;
 	line-height: 2.6rem;
 
-	@include breakpoint-up(md) {
+	@include breakpoint-up(lg) {
 		margin-bottom: $spacer3-lg;
 		font-size: 1.8rem;
 		line-height: 2.8rem;
