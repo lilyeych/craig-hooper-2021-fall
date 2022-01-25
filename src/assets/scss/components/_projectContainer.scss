@@ -5,7 +5,7 @@
 	background-color: $off-white;
 	border-radius: $border-radius-mobile;
 
-	@include breakpoint-up(lg) {
+	@include breakpoint-up(md) {
 		padding: $spacer6-lg 0;
 		margin: 0 $grid-gutter-width-lg $spacer2-lg;
 		border-radius: $border-radius-desktop;
@@ -15,7 +15,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include breakpoint-up(lg) {
+		@include breakpoint-up(md) {
 			display: grid;
 			justify-content: normal;
 		}

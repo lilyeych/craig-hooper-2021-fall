@@ -3,7 +3,7 @@
 	padding-top: $spacer7-sm;
 	padding-bottom: 8.4rem;
 
-	@include breakpoint-up(lg) {
+	@include breakpoint-up(md) {
 		padding-top: $spacer7-lg;
 		padding-bottom: 11.6rem;
 	}
@@ -18,19 +18,19 @@
 		background-size: 3.6rem 3.6rem;
 		content: "";
 
-		@include breakpoint-up(lg) {
+		@include breakpoint-up(md) {
 			bottom: $spacer4-lg;
 		}
 	}
 
 	.project-title {
-		@include breakpoint-up(lg) {
+		@include breakpoint-up(md) {
 			grid-column: span 5;
 		}
 	}
 
 	.project-description {
-		@include breakpoint-up(lg) {
+		@include breakpoint-up(md) {
 			grid-column: 7/13;
 		}
 	}

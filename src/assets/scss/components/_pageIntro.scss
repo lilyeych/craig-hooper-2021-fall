@@ -1,5 +1,5 @@
 .page-intro {
-	@include breakpoint-up(lg) {
+	@include breakpoint-up(md) {
 		grid-column: 3/11;
 	}
 

@@ -9,7 +9,7 @@
 		align-self: center;
 	}
 
-	@include breakpoint-up(lg) {
+	@include breakpoint-up(md) {
 		display: grid;
 		width: 90%;
 		padding-right: $grid-gutter-width-lg;
