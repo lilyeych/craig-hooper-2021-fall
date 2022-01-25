@@ -97,14 +97,14 @@ $transition-collapse: height 0.35s ease;
 // Fonts
 $font-family-serif: "Degular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $font-family-decorative: "Pilowlava", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$font-family-sans-serif: "Everett", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-family-sans-serif: "Cooper", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $font-family-heading: $font-family-serif;
 $font-family-base: $font-family-sans-serif;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 600;
 $font-weight-bold: 700;
-$font-weight-base: $font-weight-normal;
+$font-weight-base: $font-weight-light;
 $headings-font-family: $font-family-heading;
 $headings-font-weight: $font-weight-normal;
 $list-inline-padding: 5rem;
@@ -120,7 +120,8 @@ $zindex-popover: 1060;
 $zindex-tooltip: 1070;
 
 // Border-radius
-$border-radius: 0.8rem;
+$border-radius-mobile: 0.4rem;
+$border-radius-desktop: 0.8rem;
 
 // transition
 $transition-speed: 0.1s;

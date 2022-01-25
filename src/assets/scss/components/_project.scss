@@ -10,9 +10,10 @@
 }
 
 .project-desktop {
-	border-radius: $border-radius;
+	border-radius: $border-radius-mobile;
 	
 	@include breakpoint-up(lg) {
+		border-radius: $border-radius-desktop;
 		grid-column: 2/12;
 	}
 }
