@@ -12,6 +12,18 @@
 		background-size: 3.6rem 3.6rem;
 		content: "";
 	}
+
+	.tag {
+		margin-top: $spacer4-lg;
+
+		img {
+			width: 10rem;
+
+			@include breakpoint-up(lg) {
+				width: auto;
+			}
+		}
+	}
 }
 
 .home {
