@@ -15,7 +15,7 @@
 	img {
 		display: none;
 	
-		@include breakpoint-up(xl) {
+		@include breakpoint-up(lg) {
 			position: relative;
 			display: block;
 
