@@ -16,11 +16,21 @@
 	.tag {
 		margin-top: $spacer4-lg;
 
-		img {
+		svg {
 			width: 10rem;
 
 			@include breakpoint-up(lg) {
 				width: auto;
+			}
+		}
+	}
+}
+
+.dark {
+	.page-intro {
+		.tag {
+			path {
+				fill: $near-white;
 			}
 		}
 	}
