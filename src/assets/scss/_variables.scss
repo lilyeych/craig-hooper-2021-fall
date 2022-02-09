@@ -109,7 +109,8 @@ $headings-font-weight: $font-weight-normal;
 $list-inline-padding: 5rem;
 
 // Z-index
-$zindex-background: -1;
+$zindex-background: 0;
+$zindex-content: 1;
 $zindex-dropdown: 1000;
 $zindex-sticky: 1020;
 $zindex-fixed: 1030;
