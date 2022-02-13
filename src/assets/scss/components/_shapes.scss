@@ -1,4 +1,4 @@
-body :first-of-type {
+body > * {
 	position: relative;
 	z-index: $zindex-content;
 }
