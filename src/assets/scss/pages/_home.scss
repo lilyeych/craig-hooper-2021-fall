@@ -1,9 +1,11 @@
 body {
 	background: $near-white url("../img/bg-light-mobile.png") center top repeat;
+	background-size: 100% auto;
 	overflow-x: hidden;
 
 	@include breakpoint-up(lg) {
 		background-image: url("../img/bg-light.png");
+		background-size: auto;
 	}
 
 	&.dark {
