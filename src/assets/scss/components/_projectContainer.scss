@@ -5,6 +5,10 @@
 	background-color: $off-white;
 	border-radius: $border-radius-mobile;
 
+	@include breakpoint-up(md) {
+		padding: $spacer5-lg 0;
+	}
+
 	@include breakpoint-up(lg) {
 		padding: $spacer6-lg 0;
 		margin: 0 $grid-gutter-width-lg $spacer2-lg;
