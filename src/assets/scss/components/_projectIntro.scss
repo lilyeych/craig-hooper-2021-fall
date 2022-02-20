@@ -24,12 +24,16 @@
 	}
 
 	.project-title {
+		grid-column-end: span 12;
+
 		@include breakpoint-up(lg) {
 			grid-column: span 5;
 		}
 	}
 
 	.project-description {
+		grid-column-end: span 12;
+		
 		@include breakpoint-up(lg) {
 			grid-column: 7/13;
 		}

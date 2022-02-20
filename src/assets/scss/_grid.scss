@@ -5,20 +5,28 @@
 	padding-left: $grid-gutter-width-sm;
 	margin: 0 auto;
 
-	img {
-		align-self: center;
+	@include breakpoint-up(md) {
+		display: grid;
+		width: 100%;
+		padding-right: $grid-gutter-width-sm;
+		padding-left: $grid-gutter-width-sm;
+		gap: ($grid-gutter-width-lg * 2);
+		grid-template-columns: repeat(12, [col-start] 1fr);
+		row-gap: 0;
 	}
 
 	@include breakpoint-up(lg) {
-		display: grid;
 		width: 90%;
 		padding-right: $grid-gutter-width-lg;
 		padding-left: $grid-gutter-width-lg;
-		gap: ($grid-gutter-width-lg * 2);
-		grid-template-columns: repeat(12, [col-start] 1fr);
+		row-gap: ($grid-gutter-width-lg * 2);
 	}
 
 	@include breakpoint-up(xl) {
 		width: 100%;
+	}
+
+	img {
+		align-self: center;
 	}
 }

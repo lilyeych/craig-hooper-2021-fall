@@ -1,4 +1,6 @@
 .page-intro {
+	grid-column-end: span 12;
+
 	@include breakpoint-up(lg) {
 		grid-column: 3/11;
 	}

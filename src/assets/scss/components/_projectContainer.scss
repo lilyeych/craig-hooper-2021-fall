@@ -15,7 +15,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include breakpoint-up(lg) {
+		@include breakpoint-up(md) {
 			display: grid;
 			justify-content: normal;
 		}
