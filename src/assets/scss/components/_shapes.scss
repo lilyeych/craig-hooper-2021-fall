@@ -1,9 +1,9 @@
-body > * {
+.homepage body > * {
 	position: relative;
 	z-index: $zindex-content;
 }
 
-.shapes {
+.homepage .shapes {
 	position: absolute;
 	z-index: $zindex-background;
 	top: 36rem;
